@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/sid0025/DV2_2179/refs/heads/main/datasets/All-state-data-2026-05-06.csv"
+  },
+  "title": {
+    "text": "Peak Counts vs National Threshold by Importance",
+    "color": "#527298",
+    "fontSize": 16
+  },
+  "transform": [
+    {"calculate": "toNumber(datum['peak_sort'])", "as": "peak_num"},
+    {
+      "calculate": "toNumber(datum['National threshold'])",
+      "as": "nat_threshold"
+    },
+    {"filter": "datum.peak_num > 0 && datum.nat_threshold > 0"}
+  ],
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "importance_select",
+          "select": {"type": "point", "fields": ["Importance"]},
+          "bind": "legend"
+        }
+      ],
+      "mark": {"type": "point", "filled": true, "size": 40, "opacity": 0.5},
+      "encoding": {
+        "x": {
+          "field": "nat_threshold",
+          "type": "quantitative",
+          "title": "National Threshold"
+        },
+        "y": {
+          "field": "peak_num",
+          "type": "quantitative",
+          "title": "Peak Count (log scale)",
+          "scale": {"type": "log"},
+          "axis": {"grid": true, "gridColor": "#e0e0e0", "gridWidth": 0.5}
+        },
+        "color": {
+          "field": "Importance",
+          "type": "nominal",
+          "scale": {
+            "domain": ["International", "National"],
+            "range": ["#527298", "#E8A838"]
+          },
+          "legend": {
+            "title": "Importance",
+            "orient": "top-left",
+            "titleColor": "#527298",
+            "labelColor": "#527298",
+            "labelFont": "Lato"
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "importance_select",
+            "value": 0.7,
+            "empty": true
+          },
+          "value": 0.1
+        },
+        "tooltip": [
+          {"field": "Species", "type": "nominal", "title": "Species"},
+          {"field": "State", "type": "nominal", "title": "State"},
+          {"field": "Year", "type": "ordinal", "title": "Year"},
+          {
+            "field": "peak_num",
+            "type": "quantitative",
+            "title": "Peak Count",
+            "format": ","
+          },
+          {
+            "field": "nat_threshold",
+            "type": "quantitative",
+            "title": "National Threshold",
+            "format": ","
+          },
+          {"field": "Importance", "type": "nominal", "title": "Importance"}
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"ax": 2800, "ay": 400000}]},
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "fontSize": 10,
+        "fontStyle": "italic",
+        "color": "#527298"
+      },
+      "encoding": {
+        "x": {"field": "ax", "type": "quantitative"},
+        "y": {"field": "ay", "type": "quantitative"},
+        "text": {
+          "value": "← Some sites support 100x their threshold population"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Lato",
+    "background": "#F3FAF9",
+    "axis": {
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridColor": "#e0e0e0",
+      "gridWidth": 0.5,
+      "titleColor": "#527298",
+      "labelColor": "#527298",
+      "labelFont": "Lato",
+      "labelFontSize": 13,
+      "titleFontSize": 15
+    },
+    "legend": {
+      "titleColor": "#527298",
+      "labelColor": "#527298",
+      "labelFont": "Lato"
+    }
+  }
+}
