@@ -22,74 +22,365 @@
 <body>
     <div class="pure-g">
 
-        <!-- Header -->
+        <!-- ═══════════════════════════════════════════════
+             HERO HEADER
+        ════════════════════════════════════════════════ -->
         <div class="pure-u-1">
-            <h1>Bird Migration in Australia</h1>
-            <p id="subtitle">Exploring the seasonal patterns, population trends, and geographic spread of migratory shorebirds across Australia.</p>
+            <div class="hero">
+                <div class="hero-inner">
+                    <img src="images/67-670370_flying-bird-png-images-transparent-free-download-flying-birds-gif-transparent.png"
+                         alt="" aria-hidden="true" class="hero-bird-img hero-bird-img--left">
+                    <div class="hero-text">
+                        <h1>Wings Across Australia</h1>
+                        <p id="subtitle">A data-driven journey through the seasonal rhythms, population patterns,<br>and geographic journeys of Australia's migratory shorebirds.</p>
+                    </div>
+                    <img src="images/67-670370_flying-bird-png-images-transparent-free-download-flying-birds-gif-transparent.png"
+                         alt="" aria-hidden="true" class="hero-bird-img hero-bird-img--right">
+                </div>
+            </div>
         </div>
 
-        <!-- Section 1: Australia's Most Common Birds -->
+        <!-- ═══════════════════════════════════════════════
+             HERO STAT STRIP
+        ════════════════════════════════════════════════ -->
         <div class="pure-u-1">
-            <h2 class="section-title">Australia's Most Sighted Birds</h2>
-            <p class="section-text">Australia is home to hundreds of bird species. These charts highlight the most frequently sighted birds and the species most consistently reported by birdwatchers across the country.</p>
-        </div>
-        <div class="pure-u-1-2">
-            <div id="chart1" class="chart_container"></div>
-        </div>
-        <div class="pure-u-1-2">
-            <div id="chart8" class="chart_container"></div>
+            <div class="stat-strip">
+                <div class="stat-item">
+                    <span class="stat-icon">🦅</span>
+                    <span class="stat-number">30</span>
+                    <span class="stat-label">Shorebird Species Tracked</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-icon">📍</span>
+                    <span class="stat-number">332</span>
+                    <span class="stat-label">Monitoring Sites</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-icon">📅</span>
+                    <span class="stat-number">2010–2024</span>
+                    <span class="stat-label">Years of Records</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-icon">🌊</span>
+                    <span class="stat-number">2.18M</span>
+                    <span class="stat-label">Peak Count in WA</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-icon">✈️</span>
+                    <span class="stat-number">10,000 km</span>
+                    <span class="stat-label">Annual Migration Distance</span>
+                </div>
+            </div>
         </div>
 
-        <!-- Section 2: Migration Patterns Over Time -->
+        <!-- ═══════════════════════════════════════════════
+             SECTION 1: MOST SIGHTED BIRDS
+        ════════════════════════════════════════════════ -->
         <div class="pure-u-1">
-            <h2 class="section-title">Shorebird Migration Patterns Over Time</h2>
-            <p class="section-text">Migratory shorebirds travel thousands of kilometres each year between their breeding grounds in Siberia and Alaska and their non-breeding grounds in Australia. Use the brush below the line chart to zoom into specific years, and click the legend to highlight individual species.</p>
-        </div>
-        <div class="pure-u-1">
-            <div id="chart2" class="chart_container"></div>
+            <h2 class="section-title">
+                <span class="section-icon">🔭</span> Australia's Most Sighted Birds
+            </h2>
+            <p class="section-text">
+                Australia supports extraordinary bird diversity over 900 species, roughly 45% of which are found nowhere else on Earth.
+                The charts below highlight which species birdwatchers encounter most often and which are reported most <em>consistently</em> across survey sites.
+                High sighting frequency does not always mean high conservation value; some common urban species dominate the count
+                while rarer shorebirds appear more selectively at specialised coastal habitats.
+            </p>
         </div>
         <div class="pure-u-1-2">
-            <div id="chart3" class="chart_container"></div>
+            <div class="chart-card">
+                <div id="chart1" class="chart_container"></div>
+            </div>
         </div>
         <div class="pure-u-1-2">
-            <div id="chart9" class="chart_container"></div>
+            <div class="chart-card">
+                <div id="chart8" class="chart_container"></div>
+            </div>
         </div>
 
-        <!-- Section 3: Geographic Distribution -->
+        <!-- Insight row for Section 1 -->
         <div class="pure-u-1">
-            <h2 class="section-title">Where Do Shorebirds Gather?</h2>
-            <p class="section-text">Western Australia consistently records the highest shorebird counts in the country, driven by internationally significant sites such as Eighty Mile Beach. The scatter plot and bubble chart below reveal how individual sites and states compare against national thresholds.</p>
-        </div>
-        <div class="pure-u-1">
-            <div id="map2" class="chart_container"></div>
-        </div>
-        <div class="pure-u-1-2">
-            <div id="chart4" class="chart_container"></div>
-        </div>
-        <div class="pure-u-1-2">
-            <div id="chart5" class="chart_container"></div>
-        </div>
-        <div class="pure-u-1">
-            <div id="chart6" class="chart_container"></div>
+            <div class="insight-row">
+                <div class="insight-card insight-card--blue">
+                    <div class="insight-card__icon">🐦</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">Magpie Dominance</div>
+                        <div class="insight-card__text">The Australian Magpie consistently tops sighting counts across all states, reflecting its adaptability to urban, suburban, and rural environments alike. Its high report rate signals that it is reliably encountered whenever a survey is conducted.</div>
+                    </div>
+                </div>
+                <div class="insight-card insight-card--teal">
+                    <div class="insight-card__icon">📊</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">Report Rate vs Raw Count</div>
+                        <div class="insight-card__text">A high report rate (right chart) is a stronger indicator of ubiquity than raw sighting counts. Species like the Welcome Swallow and Willie Wagtail achieve near-equal report rates to the Magpie despite lower absolute counts, suggesting they occupy a similarly wide range of habitats but in smaller flock sizes.</div>
+                    </div>
+                </div>
+                <div class="insight-card insight-card--amber">
+                    <div class="insight-card__icon">🏙️</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">Urban Bias in the Data</div>
+                        <div class="insight-card__text">Citizen science data inherently over-represents species near population centres. The top-ranked birds are almost exclusively those tolerant of human activity. This is not a failing it is a known characteristic of opportunistic survey data that analysts must account for when drawing conservation conclusions.</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Section 4: Geelong Local Focus -->
+        <!-- ═══════════════════════════════════════════════
+             SECTION 2: MIGRATION PATTERNS
+        ════════════════════════════════════════════════ -->
         <div class="pure-u-1">
-            <h2 class="section-title">A Local Lens: Bird Sightings in Greater Geelong</h2>
-            <p class="section-text">Zooming into Greater Geelong, citizen science records reveal rich biodiversity across the region. Use the species filter on the map to explore where individual species have been spotted, and the brush on the area chart to examine sighting trends over time.</p>
+            <h2 class="section-title">
+                <span class="section-icon">🌏</span> Shorebird Migration Patterns Over Time
+            </h2>
+            <p class="section-text">
+                Every year, millions of shorebirds undertake one of nature's most extraordinary journeys, flying up to <strong>10,000 km</strong> non-stop
+                from breeding grounds in Siberia, Alaska, and China to reach the warm mudflats and estuaries of Australia.
+                They arrive in the austral spring (October–November), fatten on invertebrates throughout summer, then depart in March–April.
+                Use the brush selector beneath the peak-count chart to zoom into specific years, and click the legend to isolate individual species.
+            </p>
         </div>
         <div class="pure-u-1">
-            <div id="map1" class="chart_container"></div>
+            <div class="chart-card">
+                <div id="chart2" class="chart_container"></div>
+            </div>
+        </div>
+
+        <!-- Row divider between chart2 and chart3/chart9 -->
+        <div class="pure-u-1">
+            <div class="row-divider">
+                <span class="row-divider__label">Seasonal &amp; Classification Breakdown</span>
+            </div>
+        </div>
+
+        <div class="pure-u-1-2">
+            <div class="chart-card">
+                <div id="chart3" class="chart_container"></div>
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="chart-card">
+                <div id="chart9" class="chart_container"></div>
+            </div>
+        </div>
+
+        <!-- Insight row for Section 2 -->
+        <div class="pure-u-1">
+            <div class="insight-row">
+                <div class="insight-card insight-card--blue">
+                    <div class="insight-card__icon">📉</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">A Concerning Downward Trend</div>
+                        <div class="insight-card__text">Peak count data from 2010 to 2024 reveals a gradual decline in several key shorebird species. Far Eastern Curlew and Curlew Sandpiper, both critically listed, show the steepest trajectories, consistent with global assessments that East Asian–Australasian Flyway shorebirds face mounting habitat loss along their migration routes.</div>
+                    </div>
+                </div>
+                <div class="insight-card insight-card--teal">
+                    <div class="insight-card__icon">🍂</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">Sharp Seasonal Pulse</div>
+                        <div class="insight-card__text">The seasonal chart reveals a pronounced spike in shorebird counts between October and March (Australia's summer). Records outside this window represent resident species or early/late migrants. This tight seasonality underscores how critically dependent these birds are on consistent intertidal feeding conditions upon arrival after their non-stop transoceanic flights.</div>
+                    </div>
+                </div>
+                <div class="insight-card insight-card--purple">
+                    <div class="insight-card__icon">🥧</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">81% Nationally Important</div>
+                        <div class="insight-card__text">The donut chart shows that 81% of all shorebird records in this dataset meet Australia's <em>national</em> importance threshold, meaning they represent ≥1% of the national population at that site. The remaining 19% meet the even higher <em>international</em> threshold (≥1% of the global flyway population), concentrated almost exclusively in Western Australia.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════
+             SECTION 3: GEOGRAPHIC DISTRIBUTION
+        ════════════════════════════════════════════════ -->
+        <div class="pure-u-1">
+            <h2 class="section-title">
+                <span class="section-icon">🗺️</span> Where Do Shorebirds Gather?
+            </h2>
+            <p class="section-text">
+                Shorebird abundance across Australia is strikingly uneven. <strong>Western Australia alone accounts for over 2.18 million peak bird counts</strong>
+                more than three times the combined total of all other states. This dominance is driven by globally significant sites
+                like Eighty Mile Beach and Roebuck Bay, which provide vast, undisturbed intertidal mudflats.
+                The choropleth map, scatter plot, and bubble chart below expose the full spatial picture, from continental scale down to individual sites.
+            </p>
         </div>
         <div class="pure-u-1">
-            <div id="chart7" class="chart_container"></div>
+            <div class="chart-card">
+                <div id="map2" class="chart_container"></div>
+            </div>
+        </div>
+
+        <!-- Geographic key stats -->
+        <div class="pure-u-1">
+            <div class="geo-stats-row">
+                <div class="geo-stat">
+                    <span class="geo-stat__value" style="color:#527298">2.18M</span>
+                    <span class="geo-stat__label">WA Peak Count</span>
+                    <span class="geo-stat__sub">57% of all national records</span>
+                </div>
+                <div class="geo-stat">
+                    <span class="geo-stat__value" style="color:#5BA3A0">1.42M</span>
+                    <span class="geo-stat__label">Eighty Mile Beach alone</span>
+                    <span class="geo-stat__sub">#1 site in Australia</span>
+                </div>
+                <div class="geo-stat">
+                    <span class="geo-stat__value" style="color:#E8A838">419K</span>
+                    <span class="geo-stat__label">Roebuck Bay</span>
+                    <span class="geo-stat__sub">#2 site: Ramsar listed</span>
+                </div>
+                <div class="geo-stat">
+                    <span class="geo-stat__value" style="color:#7B5EA7">19%</span>
+                    <span class="geo-stat__label">Internationally Important Sites</span>
+                    <span class="geo-stat__sub">311 of 1,634 records</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row divider between map2 and chart4/chart5 -->
+        <div class="pure-u-1">
+            <div class="row-divider">
+                <span class="row-divider__label">Site-Level Comparisons</span>
+            </div>
+        </div>
+
+        <div class="pure-u-1-2">
+            <div class="chart-card">
+                <div id="chart4" class="chart_container"></div>
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div class="chart-card">
+                <div id="chart5" class="chart_container"></div>
+            </div>
+        </div>
+
+        <!-- Row divider between chart4/5 and chart6 -->
+        <div class="pure-u-1">
+            <div class="row-divider">
+                <span class="row-divider__label">State &amp; Species Overview</span>
+            </div>
+        </div>
+
+        <div class="pure-u-1">
+            <div class="chart-card">
+                <div id="chart6" class="chart_container"></div>
+            </div>
+        </div>
+
+        <!-- Insight row for Section 3 -->
+        <div class="pure-u-1">
+            <div class="insight-row">
+                <div class="insight-card insight-card--blue">
+                    <div class="insight-card__icon">🏆</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">WA's Outsized Importance</div>
+                        <div class="insight-card__text">Western Australia's northwest coastline provides some of the largest undisturbed intertidal habitats on the planet. Eighty Mile Beach alone hosts peak counts exceeding 1.4 million birds, more than the entirety of New South Wales, Victoria, Queensland, and South Australia combined. Any significant development or sea-level change in this region would have global consequences for flyway populations.</div>
+                    </div>
+                </div>
+                <div class="insight-card insight-card--teal">
+                    <div class="insight-card__icon">⚖️</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">National vs International Thresholds</div>
+                        <div class="insight-card__text">The scatter plot distinguishes sites that clear Australia's <em>national</em> importance threshold (≥1% of national population) from those clearing the higher <em>international</em> bar (≥1% of global flyway population). Most internationally important sites cluster in WA and NT, while southern states contain nationally important sites that are nonetheless crucial for local breeding and stopover refuelling.</div>
+                    </div>
+                </div>
+                <div class="insight-card insight-card--amber">
+                    <div class="insight-card__icon">🫧</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">Species Richness vs Abundance</div>
+                        <div class="insight-card__text">The bubble chart reveals that high abundance and high species richness do not always coincide. Some states host diverse assemblages of species at moderate densities, while WA concentrates enormous numbers of fewer dominant species. This distinction matters for conservation planning, a state can lose critical abundance without losing species count, which standard biodiversity metrics would miss.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════
+             SECTION 4: GEELONG LOCAL
+        ════════════════════════════════════════════════ -->
+        <div class="pure-u-1">
+            <h2 class="section-title">
+                <span class="section-icon">🔬</span> A Local Lens: Bird Sightings in Greater Geelong
+            </h2>
+            <p class="section-text">
+                Zooming into Greater Geelong brings the national story into sharp local focus.
+                With over <strong>65,000 sighting records</strong> spanning 8 common species, Geelong's parks, coastline, and suburban green spaces
+                support a surprisingly rich avian community. The Australian Magpie leads local counts (1,907 records),
+                followed closely by the Red Wattlebird and Welcome Swallow.
+                Use the species dropdown on the map to explore habitat preferences, and the brush on the area chart to examine year-by-year sighting trends.
+            </p>
+        </div>
+        <div class="pure-u-1">
+            <div class="chart-card">
+                <div id="map1" class="chart_container"></div>
+            </div>
+        </div>
+
+        <!-- Row divider between map1 and chart7 -->
+        <div class="pure-u-1">
+            <div class="row-divider">
+                <span class="row-divider__label">Sightings Over Time</span>
+            </div>
+        </div>
+
+        <div class="pure-u-1">
+            <div class="chart-card">
+                <div id="chart7" class="chart_container chart_container--narrow"></div>
+            </div>
+        </div>
+
+        <!-- Insight row for Section 4 -->
+        <div class="pure-u-1">
+            <div class="insight-row">
+                <div class="insight-card insight-card--teal">
+                    <div class="insight-card__icon">🌿</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">Clustering Reveals Habitat Preference</div>
+                        <div class="insight-card__text">The dot map shows clearly that species like the Superb Fairy-wren and Red Wattlebird cluster in vegetated corridors and residential gardens, while species like the Willie Wagtail spread more evenly across open areas near water. These spatial signatures help urban planners identify which green infrastructure investments most benefit local bird diversity.</div>
+                    </div>
+                </div>
+                <div class="insight-card insight-card--blue">
+                    <div class="insight-card__icon">📈</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">Citizen Science Effort Effect</div>
+                        <div class="insight-card__text">The area chart likely shows a rise in sighting records after 2015. This was not because more birds arrived, but because more observers began contributing data. Distinguishing genuine population change from increased observer effort is a key analytical challenge when interpreting long-term citizen science trends.</div>
+                    </div>
+                </div>
+                <div class="insight-card insight-card--purple">
+                    <div class="insight-card__icon">🦢</div>
+                    <div class="insight-card__body">
+                        <div class="insight-card__title">Geelong as a Biodiversity Corridor</div>
+                        <div class="insight-card__text">Greater Geelong's position on Port Phillip Bay and the Bellarine Peninsula places it within a broader coastal corridor for both resident and migratory species. The even spread of eight common species across the region, each with roughly 1,400–1,900 records, suggests a relatively balanced urban ecosystem, neither dominated by a single species nor depleted of diversity.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════
+             CLOSING TAKEAWAY BANNER
+        ════════════════════════════════════════════════ -->
+        <div class="pure-u-1">
+            <div class="takeaway-banner">
+                <svg class="takeaway-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="30" cy="30" r="28" fill="#527298" opacity="0.15"/>
+                    <path d="M10,32 Q22,10 30,28 Q38,10 50,32 Q40,26 30,34 Q20,26 10,32Z" fill="#527298" opacity="0.7"/>
+                </svg>
+                <div class="takeaway-content">
+                    <div class="takeaway-title">Key Takeaway</div>
+                    <div class="takeaway-text">Australia's shorebirds face a dual challenge: <strong>habitat degradation</strong> at their northern wintering grounds and <strong>climate-driven change</strong> to their southern non-breeding sites. The data consistently points to Western Australia as the nation's most critical stronghold.</div>
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
         <div class="pure-u-1">
             <div id="footer">
-                <p>Created by Siddhant Jain &nbsp;|&nbsp; FIT2179 Data Visualisation 2 &nbsp;|&nbsp; Monash University &nbsp;|&nbsp; 2024</p>
+                <p>Created by Siddhant Madannavar &nbsp;|&nbsp; FIT2179: Data Visualisation 2 &nbsp;|&nbsp; May 2026</p>
                 <p>Data sources: <a href="https://birdata.birdlife.org.au/" target="_blank">BirdLife Australia Birdata</a> &nbsp;|&nbsp; <a href="https://data.gov.au/" target="_blank">City of Greater Geelong Open Data</a> &nbsp;|&nbsp; <a href="https://www.abs.gov.au/" target="_blank">Australian Bureau of Statistics</a></p>
+                <p>Image source: <a href="https://www.clipartmax.com/" target="_blank">Flying Birds Banner Image</p>
             </div>
         </div>
 
