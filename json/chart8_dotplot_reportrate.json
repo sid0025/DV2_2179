@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 350,
+  "data": {
+    "url": "https://raw.githubusercontent.com/sid0025/DV2_2179/refs/heads/main/datasets/species.csv"
+  },
+  "title": {
+    "text": "Top 10 Bird Species by Reporting Rate in Australia",
+    "color": "#527298",
+    "fontSize": 16
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(replace(datum['Reporting Rate'], '%', ''))",
+      "as": "rate"
+    },
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "rate", "order": "descending"}]
+    },
+    {"filter": "datum.rank <= 10"}
+  ],
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "hover",
+          "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+        }
+      ],
+      "mark": {"type": "point", "filled": true, "size": 120},
+      "encoding": {
+        "x": {
+          "field": "rate",
+          "type": "quantitative",
+          "title": "Reporting Rate (%)"
+        },
+        "y": {
+          "field": "Common Name",
+          "type": "nominal",
+          "title": "",
+          "sort": {"field": "rate", "order": "descending"}
+        },
+        "color": {"value": "#527298"},
+        "opacity": {
+          "condition": {"param": "hover", "value": 1, "empty": true},
+          "value": 0.4
+        },
+        "tooltip": [
+          {"field": "Common Name", "type": "nominal", "title": "Species"},
+          {
+            "field": "rate",
+            "type": "quantitative",
+            "title": "Reporting Rate (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontSize": 12,
+        "color": "#527298",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "x": {"field": "rate", "type": "quantitative"},
+        "y": {
+          "field": "Common Name",
+          "type": "nominal",
+          "sort": {"field": "rate", "order": "descending"}
+        },
+        "text": {
+          "condition": {
+            "test": "datum['Common Name'] === 'Australian Magpie'",
+            "value": "Found in 1 in 3 bird surveys →"
+          },
+          "value": ""
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Lato",
+    "background": "#F3FAF9",
+    "axis": {
+      "domain": false,
+      "ticks": false,
+      "grid": false,
+      "titleColor": "#527298",
+      "labelColor": "#527298",
+      "labelFont": "Lato",
+      "labelFontSize": 13,
+      "titleFontSize": 15
+    }
+  }
+}
