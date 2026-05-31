@@ -23,7 +23,45 @@ h1 {
     padding: 0 20px;
 }
 
+.section-title {
+    font-family: 'Merriweather', serif;
+    color: #527298;
+    font-size: 22px;
+    margin: 40px 20px 6px 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #A8DADC;
+}
+
+.section-text {
+    font-family: 'Lato', sans-serif;
+    color: #527298;
+    font-size: 14px;
+    max-width: 960px;
+    margin: 0 20px 10px 20px;
+    line-height: 1.7;
+}
+
 .chart_container {
     margin: 20px;
-    width: 100%
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#footer {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #527298;
+    font-size: 13px;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #A8DADC;
+}
+
+#footer a {
+    color: #5BA3A0;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
 }
