@@ -1,8 +1,11 @@
-vegaEmbed('#chart1', 'json/chart1_top_species.json').then(function(result) {
-}).catch(console.error);
-
-vegaEmbed('#chart2', 'json/chart2_peak_counts.json').then(function(result) {
-}).catch(console.error);
-
-vegaEmbed('#chart3', 'json/chart3_seasonal.json').then(function(result) {
-}).catch(console.error);
+vegaEmbed('#chart1', 'json/chart1_top_species.json').then(function(result) {}).catch(console.error);
+vegaEmbed('#chart2', 'json/chart2_peak_counts.json').then(function(result) {}).catch(console.error);
+vegaEmbed('#chart3', 'json/chart3_seasonal.json').then(function(result) {}).catch(console.error);
+vegaEmbed('#chart4', 'json/chart4_scatterplot_national-vs-international.json').then(function(result) {}).catch(console.error);
+vegaEmbed('#chart5', 'json/chart5_top10_shorebird_site.json').then(function(result) {}).catch(console.error);
+vegaEmbed('#chart6', 'json/chart6_bubble_Shorebirds_State_Specieis.json').then(function(result) {}).catch(console.error);
+vegaEmbed('#chart7', 'json/chart7_geelong-area-chart.json').then(function(result) {}).catch(console.error);
+vegaEmbed('#chart8', 'json/chart8_dotplot_reportrate.json').then(function(result) {}).catch(console.error);
+vegaEmbed('#chart9', 'json/chart9_donut-classification.json').then(function(result) {}).catch(console.error);
+vegaEmbed('#map1', 'json/map1_geelong_birds.json').then(function(result) {}).catch(console.error);
+vegaEmbed('#map2', 'json/map2_chloropeth_map.json').then(function(result) {}).catch(console.error);
