@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bird Migration in Australia</title>
-
+ 
     <!-- Pure.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
-
+ 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
+ 
     <!-- Custom styles -->
     <link rel="stylesheet" href="layout.css">
-
+ 
     <!-- Vega-Lite -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
@@ -21,28 +21,80 @@
 </head>
 <body>
     <div class="pure-g">
-
+ 
         <!-- Header -->
         <div class="pure-u-1">
             <h1>Bird Migration in Australia</h1>
             <p id="subtitle">Exploring the seasonal patterns, population trends, and geographic spread of migratory shorebirds across Australia.</p>
         </div>
-
-        <!-- Chart 1 and Chart 3 side by side -->
+ 
+        <!-- Section 1: Australia's Most Common Birds -->
+        <div class="pure-u-1">
+            <h2 class="section-title">Australia's Most Sighted Birds</h2>
+            <p class="section-text">Australia is home to hundreds of bird species. These charts highlight the most frequently sighted birds and the species most consistently reported by birdwatchers across the country.</p>
+        </div>
         <div class="pure-u-1-2">
             <div id="chart1" class="chart_container"></div>
         </div>
         <div class="pure-u-1-2">
-            <div id="chart3" class="chart_container"></div>
+            <div id="chart8" class="chart_container"></div>
         </div>
-
-        <!-- Chart 2 full width -->
+ 
+        <!-- Section 2: Migration Patterns Over Time -->
+        <div class="pure-u-1">
+            <h2 class="section-title">Shorebird Migration Patterns Over Time</h2>
+            <p class="section-text">Migratory shorebirds travel thousands of kilometres each year between their breeding grounds in Siberia and Alaska and their non-breeding grounds in Australia. Use the brush below the line chart to zoom into specific years, and click the legend to highlight individual species.</p>
+        </div>
         <div class="pure-u-1">
             <div id="chart2" class="chart_container"></div>
         </div>
-
+        <div class="pure-u-1-2">
+            <div id="chart3" class="chart_container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="chart9" class="chart_container"></div>
+        </div>
+ 
+        <!-- Section 3: Geographic Distribution -->
+        <div class="pure-u-1">
+            <h2 class="section-title">Where Do Shorebirds Gather?</h2>
+            <p class="section-text">Western Australia consistently records the highest shorebird counts in the country, driven by internationally significant sites such as Eighty Mile Beach. The scatter plot and bubble chart below reveal how individual sites and states compare against national thresholds.</p>
+        </div>
+        <div class="pure-u-1">
+            <div id="map2" class="chart_container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="chart4" class="chart_container"></div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="chart5" class="chart_container"></div>
+        </div>
+        <div class="pure-u-1">
+            <div id="chart6" class="chart_container"></div>
+        </div>
+ 
+        <!-- Section 4: Geelong Local Focus -->
+        <div class="pure-u-1">
+            <h2 class="section-title">A Local Lens: Bird Sightings in Greater Geelong</h2>
+            <p class="section-text">Zooming into Greater Geelong, citizen science records reveal rich biodiversity across the region. Use the species filter on the map to explore where individual species have been spotted, and the brush on the area chart to examine sighting trends over time.</p>
+        </div>
+        <div class="pure-u-1">
+            <div id="map1" class="chart_container"></div>
+        </div>
+        <div class="pure-u-1">
+            <div id="chart7" class="chart_container"></div>
+        </div>
+ 
+        <!-- Footer -->
+        <div class="pure-u-1">
+            <div id="footer">
+                <p>Created by Siddhant Jain &nbsp;|&nbsp; FIT2179 Data Visualisation 2 &nbsp;|&nbsp; Monash University &nbsp;|&nbsp; 2024</p>
+                <p>Data sources: <a href="https://birdata.birdlife.org.au/" target="_blank">BirdLife Australia Birdata</a> &nbsp;|&nbsp; <a href="https://data.gov.au/" target="_blank">City of Greater Geelong Open Data</a> &nbsp;|&nbsp; <a href="https://www.abs.gov.au/" target="_blank">Australian Bureau of Statistics</a></p>
+            </div>
+        </div>
+ 
     </div>
-
+ 
     <script src="vega_lite_vis.js"></script>
 </body>
 </html>
