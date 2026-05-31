@@ -1,0 +1,99 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 320,
+  "data": {
+    "url": "https://raw.githubusercontent.com/sid0025/DV2_2179/refs/heads/main/datasets/All-state-data-2026-05-06.csv"
+  },
+  "title": {
+    "text": "Shorebird Records by Importance Classification",
+    "color": "#527298",
+    "fontSize": 16
+  },
+  "transform": [
+    {
+      "aggregate": [{"op": "count", "as": "record_count"}],
+      "groupby": ["Importance"]
+    },
+    {"joinaggregate": [{"op": "sum", "field": "record_count", "as": "total"}]},
+    {
+      "calculate": "round(datum.record_count / datum.total * 100) + '%'",
+      "as": "percentage"
+    }
+  ],
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "segment_hover",
+          "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+        }
+      ],
+      "mark": {"type": "arc", "innerRadius": 80, "outerRadius": 140},
+      "encoding": {
+        "theta": {"field": "record_count", "type": "quantitative"},
+        "color": {
+          "field": "Importance",
+          "type": "nominal",
+          "scale": {
+            "domain": ["International", "National"],
+            "range": ["#527298", "#E8A838"]
+          },
+          "legend": {
+            "title": "Importance",
+            "titleColor": "#527298",
+            "labelColor": "#527298",
+            "labelFont": "Lato",
+            "labelFontSize": 12
+          }
+        },
+        "opacity": {
+          "condition": {"param": "segment_hover", "value": 1, "empty": true},
+          "value": 0.4
+        },
+        "tooltip": [
+          {"field": "Importance", "type": "nominal", "title": "Importance"},
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "title": "Records",
+            "format": ","
+          },
+          {"field": "percentage", "type": "nominal", "title": "Percentage"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 22,
+        "fontWeight": "bold",
+        "color": "#527298",
+        "dy": -12
+      },
+      "encoding": {
+        "text": {"value": "81%"},
+        "x": {"value": 150},
+        "y": {"value": 150}
+      }
+    },
+    {
+      "mark": {"type": "text", "fontSize": 12, "color": "#527298", "dy": 10},
+      "encoding": {
+        "text": {"value": "Nationally Important"},
+        "x": {"value": 150},
+        "y": {"value": 150}
+      }
+    }
+  ],
+  "config": {
+    "font": "Lato",
+    "background": "#F3FAF9",
+    "legend": {
+      "titleColor": "#527298",
+      "labelColor": "#527298",
+      "labelFont": "Lato"
+    },
+    "view": {"stroke": null}
+  }
+}
